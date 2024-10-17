@@ -1,0 +1,12 @@
+_target_: ACIL.data.query.strategy.knn.KNN
+name: KNN
+
+# sklearn.neighbors.NearestNeighbors
+k: 3
+radius: 1.0
+algorithm: "auto"
+leaf_size:  30
+metric: "minkowski"
+p: 2
+metric_params:
+

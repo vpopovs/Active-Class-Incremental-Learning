@@ -1,0 +1,9 @@
+_target_: external.moco.model.MoCo
+network:
+  arch: resnet50
+  dim: 128
+  K: 65536
+  m: 0.999
+  T: 0.2
+  mlp: True
+

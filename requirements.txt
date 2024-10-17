@@ -1,0 +1,16 @@
+hydra-colorlog==1.2.0
+hydra-core==1.3.2
+numpy==1.23.5
+omegaconf==2.3.0
+pandas==2.1.3
+pytest==8.0.0
+pytest-catchlog==1.2.2
+pytest-mock==3.12.0
+pytest-unordered==0.5.2
+pytorch-ood==0.1.7
+scikit-learn==1.2.2
+scipy==1.10.1
+torch==2.0.1
+torchmetrics==1.3.1
+torchvision==0.15.2
+wandb==0.16.3

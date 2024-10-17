@@ -1,0 +1,7 @@
+defaults:
+  - query
+  - strategy: multiood
+
+strategy:
+  _target_: ACIL.data.query.strategy.multiood.MultiOODChecker
+  name: energy

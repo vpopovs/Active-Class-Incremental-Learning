@@ -1,0 +1,24 @@
+defaults:
+  - dataset
+  - ../transforms@training_transforms: 224_flip_color
+  - ../transforms@dataset_transforms: normalize
+
+dataset_name: Places365_LT
+n_classes: 365
+
+train:
+  _target_: ACIL.data.dataset.TXTDataset.TXTDataset
+  root: ${data.dataset_dir}/Places365
+  txt: Places_LT_train.txt
+val:
+  _target_: ACIL.data.dataset.TXTDataset.TXTDataset
+  root: ${data.dataset_dir}/Places365
+  txt: Places_LT_val.txt
+test:
+  _target_: ACIL.data.dataset.TXTDataset.TXTDataset
+  root: ${data.dataset_dir}/Places365
+  txt: Places_LT_test.txt
+openset:
+  _target_: ACIL.data.dataset.TXTDataset.TXTDataset
+  root: ${data.dataset_dir}/Places365/Places_LT_open
+  txt: Places_LT_open.txt

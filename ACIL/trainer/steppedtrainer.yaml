@@ -1,0 +1,9 @@
+defaults:
+  - trainer
+  - scheduler/StepLR
+
+_target_: ACIL.trainer.trainer.SteppedTrainer
+
+iterations: 10                          # Number of iterations for querying the oracle
+steps: 2                                # Number of steps before stepping the scheduler
+  

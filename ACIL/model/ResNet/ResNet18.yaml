@@ -1,0 +1,8 @@
+defaults:
+  - base
+
+_target_: ACIL.model.ResNet.ResNet.ResNet18
+name: ResNet18
+
+layers: [2, 2, 2, 2]
+bottleneck: 512

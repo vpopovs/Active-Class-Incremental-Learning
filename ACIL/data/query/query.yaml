@@ -1,0 +1,11 @@
+_target_: ACIL.data.query.query.Query
+n_samples: ${data.initial.size} # Number of samples to return in each query
+incremental: True
+limit_inferences: False # Limit the number of samples checked in each query
+strategy: 
+
+query_every: 1 # Legacy: Number of epoch between each query
+warmup: 3 # Legacy: Number of epoch before starting the query
+inference_before_warmup: False # Query before warmup
+
+osr: True

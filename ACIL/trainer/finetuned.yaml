@@ -1,0 +1,8 @@
+defaults:
+  - steppedtrainer
+  - scheduler@scheduler.fc: StepLR
+  - scheduler@scheduler.backbone: OneCycleLR
+
+_target_: ACIL.trainer.trainer.FinetunedTrained
+
+steps: 1                                # Number of steps before stepping the scheduler

@@ -1,0 +1,5 @@
+_target_: ACIL.model.criterions.MSELoss.MSELoss
+
+size_average:
+reduce:
+reduction: mean

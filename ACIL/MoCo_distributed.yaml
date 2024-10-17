@@ -1,0 +1,5 @@
+defaults:
+  - main
+  - data: normal
+  - external/MoCo@trainer: moco_distributed
+  - _self_

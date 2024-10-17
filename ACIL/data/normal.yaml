@@ -1,0 +1,22 @@
+defaults:
+  - dataloaders@dataloaders.train_loader: torch
+  - dataloaders@dataloaders.train_plain_loader: torch
+  - dataloaders@dataloaders.val_loader: torch
+  - dataloaders@dataloaders.test_loader: torch
+
+_target_: ACIL.data.data.Data
+
+batch_size: 64
+num_workers: 16
+
+dataset_transforms: ${data.dataset.dataset_transforms}
+training_transforms: ${data.dataset.training_transforms}
+
+seed: ${seed}
+dataset_dir: ${hydra:runtime.cwd}/data
+download: True
+
+limit:
+  train: False
+  val: False
+  test: False

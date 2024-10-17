@@ -1,0 +1,10 @@
+_target_: ACIL.data.sampler.MinMaxROS.MinMaxROS
+
+n_per_class: 20
+
+n_max: False
+n_min: False
+
+shuffle: True
+
+verbose: False

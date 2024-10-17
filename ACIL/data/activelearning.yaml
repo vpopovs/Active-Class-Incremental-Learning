@@ -1,0 +1,28 @@
+defaults:
+  - normal
+  - dataloaders@dataloaders.labelled_loader: torch
+  - dataloaders@dataloaders.unlabelled_loader: torch
+  - query: query
+
+_target_: ACIL.data.activelearning.ActiveLearning
+
+dataloaders:
+  train_loader:
+    shuffle: False
+  train_plain_loader:
+    shuffle: False
+  val_loader:
+    shuffle: False
+  test_loader:
+    shuffle: False
+  unlabelled_loader:
+    shuffle: True
+
+kfold: False
+
+initial:
+  type: random # random or balanced.
+  size: 1500
+  reorder: True
+
+extra_classes: 0 # Legacy: 0.1 is 10% of the total number of classes

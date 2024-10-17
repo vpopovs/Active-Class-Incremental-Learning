@@ -1,0 +1,9 @@
+# Change detector inline with: +data/query/strategy@data.query.strategy.detector=x
+
+defaults:
+  - .@detector: entropy
+
+_target_: ACIL.data.query.strategy.react.ReAct
+name: ReAct
+
+threshold: 1.0

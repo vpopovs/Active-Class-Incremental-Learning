@@ -1,0 +1,10 @@
+dataset_name:
+n_classes: 
+tail: False
+open: False
+
+dataset_transforms: []
+training_transforms: []
+
+train:
+test:

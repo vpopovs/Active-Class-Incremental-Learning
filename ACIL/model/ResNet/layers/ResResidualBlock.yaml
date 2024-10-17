@@ -1,0 +1,7 @@
+_target_: ACIL.model.ResNet.AEResNet.EncoderResidualBlock
+
+in_channels: 512 
+hidden_channels: 1024
+
+layers: 3
+downsample_method: conv

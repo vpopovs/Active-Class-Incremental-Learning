@@ -1,0 +1,5 @@
+defaults:
+  - classincremental
+
+_target_: ACIL.model.classincremental.QueryAfterTrain
+query: True

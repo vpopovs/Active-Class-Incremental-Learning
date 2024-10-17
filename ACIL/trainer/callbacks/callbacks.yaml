@@ -1,0 +1,3 @@
+defaults:
+  - wandb/wandb
+_target_: ACIL.trainer.callbacks.callbacks.Callbacks

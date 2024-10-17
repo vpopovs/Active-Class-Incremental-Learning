@@ -1,0 +1,17 @@
+defaults:
+  - main
+  - trainer/optimizer@trainer.optimizer: Adam
+  - trainer/callbacks/eval: stop
+  - data: activelearning
+  - model/criterions@model.criterion: CrossEntropy
+  - data/sampler@data.dataloaders.train_loader.sampler: MinMaxROS
+  - _self_
+
+trainer:
+  iterations: 1
+  epochs: 200
+  optimizer:
+    lr: 0.0015
+    
+model:
+  reload_model_on_new_classes: False

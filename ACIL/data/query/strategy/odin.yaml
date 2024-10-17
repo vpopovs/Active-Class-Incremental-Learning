@@ -1,0 +1,5 @@
+_target_: ACIL.data.query.strategy.odin.ODIN
+name: ODIN
+
+eps: 0.05
+temperature: 1000

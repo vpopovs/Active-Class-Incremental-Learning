@@ -1,0 +1,11 @@
+_target_: ACIL.trainer.callbacks.eval.stop.EvalStop
+
+loader: val # test / val
+
+warmup: 10
+patience: 15
+
+checkpoint: True
+output_dir: models
+
+metric: accuracy

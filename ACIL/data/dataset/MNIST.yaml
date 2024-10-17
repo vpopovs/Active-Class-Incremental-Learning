@@ -1,0 +1,19 @@
+defaults:
+  - dataset
+
+dataset_name: MNIST
+n_classes: 10
+
+dataset_transforms:
+  - ACIL.data.transforms.transforms.make_grayscale_3channels:
+
+train:
+  _target_: torchvision.datasets.MNIST
+  root: ${data.dataset_dir}
+  train: True
+  download: ${data.download}
+test:
+  _target_: torchvision.datasets.MNIST
+  root: ${data.dataset_dir}
+  train: False
+  download: ${data.download}

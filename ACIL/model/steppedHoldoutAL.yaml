@@ -1,0 +1,9 @@
+defaults:
+  - classincremental
+
+_target_: ACIL.model.classincremental.HoldoutModel
+
+steps: [None, 0]
+reload_model_on_new_classes: True
+query: True
+holdout: 1

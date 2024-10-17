@@ -1,0 +1,12 @@
+defaults:
+  - callbacks/callbacks
+
+device: ${device}
+
+_target_: ACIL.trainer.trainer.BaseTrainer
+
+output_dir: models                      # Directory to save the model
+save_last: True                         # Save the last checkpoint
+eval_at_end: test                       # False or which loader (e.g. val, test) to evaluate at the end of training
+epochs: 300                             # Number of epochs (one pass through the data or sampler)
+verbose: False                          # Print the each training step

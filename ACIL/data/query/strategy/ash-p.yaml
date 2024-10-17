@@ -1,0 +1,5 @@
+_target_: ACIL.data.query.strategy.ash.ASH
+name: ASH-${.variant}
+
+variant: p
+percentile: 0.65

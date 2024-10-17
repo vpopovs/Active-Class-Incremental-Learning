@@ -1,0 +1,11 @@
+defaults:
+  - model
+
+_target_: ACIL.model.classincremental.ClassIncrementalModel
+
+reload_model_on_new_classes: False
+
+fc: 
+  update: True # whether to update the fc with new class discovery
+  transfer_weights: False # whether to transfer weights from the previous model
+  reinit_optimizer: True # whether to reinitialize the optimizer

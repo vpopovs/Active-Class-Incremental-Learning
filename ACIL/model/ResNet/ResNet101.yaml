@@ -1,0 +1,8 @@
+defaults:
+  - base
+
+_target_: ACIL.model.ResNet.ResNet.ResNet101
+name: ResNet101
+
+layers: [3, 4, 23, 3]
+bottleneck: 2048

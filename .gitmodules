@@ -1,0 +1,3 @@
+[submodule "external/moco/moco"]
+	path = external/moco/moco
+	url = https://github.com/facebookresearch/moco.git

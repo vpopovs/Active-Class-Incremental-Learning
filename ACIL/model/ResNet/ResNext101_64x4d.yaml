@@ -1,0 +1,5 @@
+defaults:
+  - base
+
+_target_: ACIL.model.ResNet.ResNet.ResNext101_64x4d
+name: ResNext101_64x4d

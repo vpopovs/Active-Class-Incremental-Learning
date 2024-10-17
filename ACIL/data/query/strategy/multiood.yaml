@@ -1,0 +1,23 @@
+# Add strategies to the defaults, ordering does not matter. Or comment them out.
+
+defaults:
+  - .@strategies[0]: ash-b
+  - .@strategies[1]: ash-p
+  - .@strategies[2]: ash-s
+  - .@strategies[3]: dice
+  - .@strategies[4]: energy
+  - .@strategies[5]: entropy
+  - .@strategies[6]: klmatching
+  # - .@strategies[7]: enwedi
+  - .@strategies[8]: knn
+  - .@strategies[9]: margin
+  - .@strategies[10]: odin
+  - .@strategies[11]: random
+  - .@strategies[12]: react
+  - .@strategies[13]: rmd
+  - .@strategies[14]: she
+  - .@strategies[15]: uncertainty
+  - .@strategies[16]: vim
+
+_target_: ACIL.data.query.strategy.multiood.MultiOOD
+name: MultiOOD

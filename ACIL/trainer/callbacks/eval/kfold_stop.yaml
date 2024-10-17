@@ -1,0 +1,10 @@
+defaults:
+  - stop
+
+_target_: ACIL.trainer.callbacks.eval.kfold_stop.KFoldStop
+
+n_folds: ${model.kfold.n_splits}
+warmup: 1
+patience: 3
+
+metric: accuracy

@@ -1,0 +1,37 @@
+defaults:
+  - dataset
+  - ../transforms@training_transforms: 224_flip_color
+  - ../transforms@dataset_transforms: normalize
+
+dataset_name: iNaturalist2018_Partial
+n_classes: -1
+
+split:
+  val: 
+    n_samples: 3
+  test: 
+    n_samples: 5
+  osr:
+    n_samples: 1000
+
+data:
+  _target_: ACIL.data.dataset.ImageFolder.PartialImageFolder
+  root: ${data.dataset_dir}/iNaturalist2018/train_val2018
+  families: # Sorted from largers > smallest
+  - Plantae
+
+superclasses: # Sorted from largers > smallest
+  # - Plantae
+  - Insecta
+  - Aves
+  - Actinopterygii
+  - Fungi
+  - Reptilia
+  - Mollusca
+  - Mammalia
+  - Animalia
+  - Amphibia
+  - Arachnida
+  - Chromista
+  - Protozoa
+  - Bacteria

@@ -1,0 +1,6 @@
+_target_: ACIL.trainer.callbacks.checkpoint.checkpoint.Checkpoint
+output_dir: checkpoints
+
+every_n_epochs: 5
+last: True
+best: True

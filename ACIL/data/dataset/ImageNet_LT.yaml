@@ -1,0 +1,24 @@
+defaults:
+  - dataset
+  - ../transforms@training_transforms: 224_flip_color
+  - ../transforms@dataset_transforms: normalize
+
+dataset_name: ImageNet_LT
+n_classes: 1000
+
+train:
+  _target_: ACIL.data.dataset.TXTDataset.TXTDataset
+  root: ${data.dataset_dir}/ImageNet2012
+  txt: ImageNet_LT_train.txt
+val:
+  _target_: ACIL.data.dataset.TXTDataset.TXTDataset
+  root: ${data.dataset_dir}/ImageNet2012
+  txt: ImageNet_LT_val.txt
+test:
+  _target_: ACIL.data.dataset.TXTDataset.TXTDataset
+  root: ${data.dataset_dir}/ImageNet2012
+  txt: ImageNet_LT_test_adapted.txt
+openset:
+  _target_: ACIL.data.dataset.TXTDataset.TXTDataset
+  root: ${data.dataset_dir}/ImageNet2012/ImageNet_LT_open
+  txt: ImageNet_LT_open.txt

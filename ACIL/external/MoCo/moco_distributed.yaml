@@ -1,0 +1,37 @@
+# DATALOADER
+seed:
+batch_size: 256
+workers: 32
+
+# MODEL
+arch: resnet50
+moco_dim: 128
+moco_k: 65536
+moco_m: 0.999
+moco_t: 0.2
+mlp: True
+
+# TRAINER
+resume: ""
+epochs: 200
+start_epoch: 0
+schedule: [120, 160]
+optim: SGD
+lr: 0.015
+momentum: 0.9
+weight_decay: 1e-4
+
+save_every: 10
+aug_plus: True
+cos: True
+
+# GPU
+gpu: 
+multiprocessing_distributed: False
+distributed: ${.multiprocessing_distributed}
+
+# DISTRIBUTED
+world_size: 
+rank: 
+dist_url: tcp://localhost:8841
+dist_backend: nccl

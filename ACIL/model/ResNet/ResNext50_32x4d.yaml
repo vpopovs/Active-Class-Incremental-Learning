@@ -1,0 +1,5 @@
+defaults:
+  - base
+
+_target_: ACIL.model.ResNet.ResNet.ResNext50_32x4d
+name: ResNext50_32x4d

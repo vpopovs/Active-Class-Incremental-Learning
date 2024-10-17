@@ -1,0 +1,16 @@
+defaults:
+  - main
+  - trainer/optimizer@trainer.optimizer: Adam
+  - trainer/scheduler: StepLR
+  - trainer/callbacks/eval: kfold_stop
+  - data: activelearning
+  - model: steppedKfoldAL
+  - model/criterions@model.criterion: CrossEntropy
+  - data/sampler@data.dataloaders.train_loader.sampler: MinMaxROS
+  - _self_
+
+trainer:
+  iterations: 14
+  epochs: 300
+  optimizer:
+    lr: 0.0015

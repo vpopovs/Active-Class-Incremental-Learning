@@ -1,0 +1,6 @@
+_target_: torch.utils.data.DataLoader
+
+batch_size: ${data.batch_size}
+shuffle: True
+drop_last: False
+num_workers: ${data.num_workers}

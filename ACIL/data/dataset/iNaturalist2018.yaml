@@ -1,0 +1,17 @@
+defaults:
+  - dataset
+  - ../transforms@training_transforms: 224_flip_color
+  - ../transforms@dataset_transforms: normalize
+
+dataset_name: iNaturalist2018
+n_classes: 8142
+
+split:
+  val: 
+    n_samples: 3
+  test: 
+    n_samples: 5
+
+data:
+  _target_: ACIL.data.dataset.ImageFolder.ImageFolder
+  root: ${data.dataset_dir}/iNaturalist2018/train_val2018

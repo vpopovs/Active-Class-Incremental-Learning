@@ -1,0 +1,34 @@
+# Based on recommended configs from https://github.com/facebookresearch/moco for 4 GPU machine MoCov2
+defaults:
+  - transforms: aug_plus
+
+
+_target_: external.moco.trainer.MoCo_Trainer
+# DATALOADER
+batch_size: 128
+workers: 32
+
+# TRAINER
+resume: ""
+epochs: 200
+start_epoch: 0
+schedule: [120, 160]
+optimizer:
+  _target_: torch.optim.SGD
+  lr: 0.015
+  momentum: 0.9
+  weight_decay: 1e-4
+
+save_every: 10
+aug_plus: True
+cos: True
+
+# GPU
+gpu: 
+multiprocessing-distributed: False
+
+# DISTRIBUTED
+world-size: -1
+rank: -1
+dist-url:
+dist-backend:

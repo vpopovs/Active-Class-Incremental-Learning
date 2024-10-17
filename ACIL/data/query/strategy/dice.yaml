@@ -1,0 +1,4 @@
+_target_: ACIL.data.query.strategy.dice.DICE
+name: DICE
+
+p: 0.7
