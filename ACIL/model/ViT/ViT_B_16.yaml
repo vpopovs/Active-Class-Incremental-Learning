@@ -1,0 +1,7 @@
+defaults:
+  - base
+
+_target_: ACIL.model.ViT.ViT.ViT_B_16
+name: ViT_B_16
+
+

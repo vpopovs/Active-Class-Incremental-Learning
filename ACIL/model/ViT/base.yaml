@@ -1,0 +1,5 @@
+pretrained: DEFAULT
+freeze: True
+extra_fc: 256
+
+
