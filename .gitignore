@@ -5,3 +5,4 @@ outputs
 .wandb/
 # macOS
 .DS_Store
+Thesis/
