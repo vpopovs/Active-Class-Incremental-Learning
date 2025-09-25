@@ -1,0 +1,31 @@
+defaults:
+    - dataset
+    - ../transforms@training_transforms: 224_flip_color
+    - ../transforms@dataset_transforms: normalize
+
+dataset_name: Dummy
+n_classes: 14
+
+train:
+    _target_: ACIL.data.dataset.DummyDataset.DummyDataset
+    root: ""
+    txt: ""
+    n_samples: 5000
+    n_classes: 14
+    # targets_attr: targets
+
+val:
+    _target_: ACIL.data.dataset.DummyDataset.DummyDataset
+    root: ""
+    txt: ""
+    n_samples: 5000
+    n_classes: 14
+    # targets_attr: targets
+
+test:
+    _target_: ACIL.data.dataset.DummyDataset.DummyDataset
+    root: ""
+    txt: ""
+    n_samples: 5000
+    n_classes: 14
+    # targets_attr: targets
